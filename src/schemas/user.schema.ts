@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod';
 
 export const createUserSchema = {
   body: z.object({
@@ -7,8 +7,20 @@ export const createUserSchema = {
   }),
   response: {
     201: z.object({
-      id: z.string(),
+      id: z.string().uuid(),
       email: z.string().email(),
     }),
+  },
+};
+
+export const getUsersSchema = {
+  response: {
+    200: z.array(
+      z.object({
+        id: z.string().uuid(),
+        email: z.string().email(),
+        createdAt: z.string(),
+      })
+    ),
   },
 };
