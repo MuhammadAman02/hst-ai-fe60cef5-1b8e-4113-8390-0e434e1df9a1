@@ -1,0 +1,6 @@
+[
+  {
+    "role": "user",
+    "content": "The deployment failed with the following error from Fly.io:\n\n#8 17.77 npm error code ETARGET\n#8 17.77 npm error notarget No matching version found for envsafe@^7.0.4.\n#8 17.77 npm error notarget In most cases you or one of your dependencies are requesting\n\nPlease fix the issue."
+  }
+]
